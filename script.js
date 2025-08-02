@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const vixDataElement = document.getElementById('vix-data');
 
     function fetchVixData() {
-        fetch('/api/vix_data')
+        fetch('/api/vix')
             .then(response => response.json())
             .then(data => {
                 vixDataElement.innerHTML = `<div class="price">${data.price.toFixed(2)}</div>`;
